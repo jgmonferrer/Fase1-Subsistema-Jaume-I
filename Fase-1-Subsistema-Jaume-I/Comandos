@@ -23,3 +23,10 @@ New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.50
 
 #Cambiar la máscara de la interfaz. X significa la ID de la interfaz y la Y la cantidad de bits que tendrá la máscara
 Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
+
+#Permitir pings a la máquina
+netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any dir=in action=allow
+
+#Deshabilitar IPv6
+Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’ | Disable-NetAdapterBinding -ComponentID ‘ms_tcpip6’ -PassThru
+

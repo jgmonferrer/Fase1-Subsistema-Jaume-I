@@ -1,1 +1,25 @@
 
+#Comandos usados para configurar el servidor Jaume I
+
+#WIP
+
+#Renombrar el nombre del dispositivo
+Rename-Computer -NewName "SRV-Jaume-I"
+
+#Cambiar la hora por internet del servidor
+w32tm /config /syncfromflags:manual /manualpeerlist:es.ntp.pool.org /update
+
+#Apagar el servicio de hora por internet
+Stop-service w32time
+
+#Encender el servicio de hora por internet
+Start-service w32time
+
+#Conocer la ID del adaptador de red
+Get-netadapter
+
+#Cambiar la IP del adaptador de red. X significa la ID de la interfaz y la Y la ip que quieras asignar
+New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.50
+
+#Cambiar la máscara de la interfaz. X significa la ID de la interfaz y la Y la cantidad de bits que tendrá la máscara
+Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24

@@ -18,11 +18,14 @@ Start-service w32time
 #Conocer la ID del adaptador de red
 Get-netadapter
 
-#Cambiar la IP del adaptador de red. X significa la ID de la interfaz y la Y la ip que quieras asignar
-New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.50
+#Cambiar la IP del adaptador de red. 5 significa la ID de la interfaz y 192.168.2.51 la ip asignada
+New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.51
 
-#Cambiar la máscara de la interfaz. X significa la ID de la interfaz y la Y la cantidad de bits que tendrá la máscara
+#Cambiar la máscara de la interfaz. 5 significa la ID de la interfaz y 24 la cantidad de bits que tendrá la máscara
 Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
+
+#Añadir una puerta de enlace en una interfaz
+New-NetRoute -ifIndex 5 -DestinationPrefix 0.0.0.0/0 -NextHop X
 
 #Permitir pings a la máquina
 netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any dir=in action=allow

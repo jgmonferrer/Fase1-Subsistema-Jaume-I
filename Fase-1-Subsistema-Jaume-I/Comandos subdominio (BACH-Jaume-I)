@@ -4,7 +4,7 @@
 #WIP
 
 #Renombrar el nombre del dispositivo
-Rename-Computer -NewName "SRV-Jaume-I"
+Rename-Computer -NewName "BACH-Jaume-I"
 
 #Cambiar la hora por internet del servidor
 w32tm /config /syncfromflags:manual /manualpeerlist:es.ntp.pool.org /update
@@ -18,8 +18,8 @@ Start-service w32time
 #Conocer la ID del adaptador de red
 Get-netadapter
 
-#Cambiar la IP del adaptador de red. 5 significa la ID de la interfaz y 192.168.2.51 la ip asignada
-New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.51
+#Cambiar la IP del adaptador de red. 5 significa la ID de la interfaz y 192.168.2.52 la ip asignada
+New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.52
 
 #Cambiar la máscara de la interfaz. 5 significa la ID de la interfaz y 24 la cantidad de bits que tendrá la máscara
 Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
@@ -28,7 +28,7 @@ Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
 New-NetRoute -ifIndex 5 -DestinationPrefix 0.0.0.0/0 -NextHop X
 
 #Añadir un servidor DNS a una interfaz
-Set-DnsClientServerAddress -InterfaceIndex 1 -ServerAddresses 192.168.2.254
+Set-DnsClientServerAddress -InterfaceIndex 1 -ServerAddresses ("127.0.0.1","192.168.2.51")
 
 #Permitir pings a la máquina
 netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any dir=in action=allow
@@ -42,24 +42,24 @@ Get-Windowsfeature
 #Instalar los servicios ADDS y DNS
 Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools 
 
-#Promocionar a dominio el servidor
-$dominioFQDN = "IESJaume-I.mylocal"
-$dominioNETBIOS = "IESJAUME-I"
-$adminPass = "D0M1n1o3DucAt1v0"
+#Promocionar a subdominio el servidor
 Import-Module ADDSDeployment
-Install-ADDSForest `
--CreateDnsDelegation:$False `
+Install-ADDSDomain `
+-NoGlobalCatalog:$false `
+-CreateDnsDelegation:$true `
+-Credential (Get-Credential) `
 -DatabasePath "C:\Windows\NTDS" `
 -DomainMode "Win2016" `
--DomainName $dominioFQDN `
--DomainNetbiosName $dominioNETBIOS `
--SafeModeAdministratorPassword (ConvertTo-SecureString -string $adminPass -AsPlainText -Force)
--ForestMode "Win2016" `
--InstallDns:$True `
+-DomainType "ChildDomain" `
+-InstallDns:$true `
 -LogPath "C:\Windows\NTDS" `
--NoRebootOnCompletion:$False `
+-NewDomainName "BACH" `
+-NewDomainNetbiosName "BACH" `
+-ParentDomainName "BACH.IESJaume-I.mylocal" `
+-NoRebootOnCompletion:$false `
+-SiteName "Default-First-Site-Name" `
 -SysvolPath "C:\Windows\SYSVOL" `
--Force:$true 
+-Force:$true
 
 #Modificar archivos de AD mediante línea de comandos (este comando tiene subcomandos dentro de el, para verlos escriba ntdsutil help)
 ntdsutil

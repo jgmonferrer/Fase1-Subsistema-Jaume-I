@@ -36,3 +36,39 @@ netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any 
 #Deshabilitar IPv6
 Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’ | Disable-NetAdapterBinding -ComponentID ‘ms_tcpip6’ -PassThru
 
+#Conocer los servicios instalados en el servidor
+Get-Windowsfeature
+
+#Instalar los servicios ADDS y DNS
+Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools 
+
+#Promocionar a dominio el servidor
+$dominioFQDN = "IESJaume-I.mylocal"
+$dominioNETBIOS = "IESJAUME-I"
+$adminPass = "D0M1n1o3DucAt1v0"
+Import-Module ADDSDeployment
+Install-ADDSForest `
+-CreateDnsDelegation:$False `
+-DatabasePath "C:\Windows\NTDS" `
+-DomainMode "Win2016" `
+-DomainName $dominioFQDN `
+-DomainNetbiosName $dominioNETBIOS `
+-SafeModeAdministratorPassword (ConvertTo-SecureString -string $adminPass -AsPlainText -Force)
+-ForestMode "Win2016" `
+-InstallDns:$True `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$False `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true 
+
+#Modificar archivos de AD mediante línea de comandos (este comando tiene subcomandos dentro de el, para verlos escriba ntdsutil help)
+ntdsutil
+
+#Mostrar información que puede ser usada para diagnosticar la infraestructura del DNS (escriba el dominio del servidor sin parentesis)
+nslookup (dominio)
+
+#Conocer en que servidor estas iniciando sesión
+echo %logonserver%
+
+#Conocer el usuario con el que tienes iniciado sesión
+whoami

@@ -62,6 +62,13 @@ Install-ADDSDomain `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
 
+#Despromocionar el subdominio
+Import-Module ADDSDeployment
+Uninstall-ADDSDomainController `
+-DemoteOperationMasterRole:$true `
+-ForceRemoval:$true `
+-Force:$true
+
 #Modificar archivos de AD mediante línea de comandos (este comando tiene subcomandos dentro de el, para verlos escriba ntdsutil help)
 ntdsutil
 

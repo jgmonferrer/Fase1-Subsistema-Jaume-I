@@ -73,3 +73,9 @@ echo %logonserver%
 
 #Conocer el usuario con el que tienes iniciado sesión
 whoami
+
+#Comprobar réplicas del servidor
+repadmin /showrepl
+
+#Sincronizar réplicas del servidor
+repadmin /syncall

@@ -1,8 +1,6 @@
 
 #Comandos usados para configurar el servidor Jaume I
 
-#WIP
-
 #Renombrar el nombre del dispositivo
 Rename-Computer -NewName "SRV-Jaume-I"
 

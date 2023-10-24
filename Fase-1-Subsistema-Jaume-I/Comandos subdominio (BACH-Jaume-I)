@@ -1,0 +1,74 @@
+
+#Comandos usados para configurar el servidor Jaume I
+
+#WIP
+
+#Renombrar el nombre del dispositivo
+Rename-Computer -NewName "SRV-Jaume-I"
+
+#Cambiar la hora por internet del servidor
+w32tm /config /syncfromflags:manual /manualpeerlist:es.ntp.pool.org /update
+
+#Apagar el servicio de hora por internet
+Stop-service w32time
+
+#Encender el servicio de hora por internet
+Start-service w32time
+
+#Conocer la ID del adaptador de red
+Get-netadapter
+
+#Cambiar la IP del adaptador de red. 5 significa la ID de la interfaz y 192.168.2.51 la ip asignada
+New-Netipaddress -InterfaceIndex 5 -IpAddress 192.168.2.51
+
+#Cambiar la máscara de la interfaz. 5 significa la ID de la interfaz y 24 la cantidad de bits que tendrá la máscara
+Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
+
+#Añadir una puerta de enlace en una interfaz
+New-NetRoute -ifIndex 5 -DestinationPrefix 0.0.0.0/0 -NextHop X
+
+#Añadir un servidor DNS a una interfaz
+Set-DnsClientServerAddress -InterfaceIndex 1 -ServerAddresses 192.168.2.254
+
+#Permitir pings a la máquina
+netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any dir=in action=allow
+
+#Deshabilitar IPv6
+Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’ | Disable-NetAdapterBinding -ComponentID ‘ms_tcpip6’ -PassThru
+
+#Conocer los servicios instalados en el servidor
+Get-Windowsfeature
+
+#Instalar los servicios ADDS y DNS
+Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools 
+
+#Promocionar a dominio el servidor
+$dominioFQDN = "IESJaume-I.mylocal"
+$dominioNETBIOS = "IESJAUME-I"
+$adminPass = "D0M1n1o3DucAt1v0"
+Import-Module ADDSDeployment
+Install-ADDSForest `
+-CreateDnsDelegation:$False `
+-DatabasePath "C:\Windows\NTDS" `
+-DomainMode "Win2016" `
+-DomainName $dominioFQDN `
+-DomainNetbiosName $dominioNETBIOS `
+-SafeModeAdministratorPassword (ConvertTo-SecureString -string $adminPass -AsPlainText -Force)
+-ForestMode "Win2016" `
+-InstallDns:$True `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$False `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true 
+
+#Modificar archivos de AD mediante línea de comandos (este comando tiene subcomandos dentro de el, para verlos escriba ntdsutil help)
+ntdsutil
+
+#Mostrar información que puede ser usada para diagnosticar la infraestructura del DNS (escriba el dominio del servidor sin parentesis)
+nslookup (dominio)
+
+#Conocer en que servidor estas iniciando sesión
+echo %logonserver%
+
+#Conocer el usuario con el que tienes iniciado sesión
+whoami

@@ -46,7 +46,7 @@ Install-WindowsFeature -name AD-Domain-Services,DNS -IncludeManagementTools
 #Promocionar a dominio el servidor
 $dominioFQDN = "IESJaume-I.mylocal"
 $dominioNETBIOS = "IESJAUME-I"
-$adminPass = "D0M1n1o3DucAt1v0"
+$adminPass = "D0M1n1oeDucAt1v0"
 Import-Module ADDSDeployment
 Install-ADDSForest `
 -CreateDnsDelegation:$False `

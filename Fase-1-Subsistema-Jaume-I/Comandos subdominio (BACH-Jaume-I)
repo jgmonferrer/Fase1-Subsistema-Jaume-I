@@ -29,7 +29,7 @@ Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
 New-NetRoute -ifIndex 5 -DestinationPrefix 0.0.0.0/0 -NextHop X
 
 #Añadir un servidor DNS a una interfaz
-Set-DnsClientServerAddress -InterfaceIndex 1 -ServerAddresses ("127.0.0.1","192.168.2.51")
+Set-DnsClientServerAddress -InterfaceIndex 5 -ServerAddresses ("127.0.0.1","192.168.2.51")
 
 #Permitir pings a la máquina
 netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any dir=in action=allow
@@ -56,7 +56,7 @@ Install-ADDSDomain `
 -LogPath "C:\Windows\NTDS" `
 -NewDomainName "BACH" `
 -NewDomainNetbiosName "BACH" `
--ParentDomainName "BACH.IESJaume-I.mylocal" `
+-ParentDomainName "IESJaume-I.mylocal" `
 -NoRebootOnCompletion:$false `
 -SiteName "Default-First-Site-Name" `
 -SysvolPath "C:\Windows\SYSVOL" `

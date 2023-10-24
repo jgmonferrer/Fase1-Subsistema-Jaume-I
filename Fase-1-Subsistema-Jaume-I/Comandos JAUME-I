@@ -27,8 +27,8 @@ Set-NetIPAddress -InterfaceIndex 5 -PrefixLength 24
 #Añadir una puerta de enlace en una interfaz
 New-NetRoute -ifIndex 5 -DestinationPrefix 0.0.0.0/0 -NextHop X
 
-#Añadir un servidor DNS a una interfaz
-Set-DnsClientServerAddress -InterfaceIndex 1 -ServerAddresses 192.168.2.254
+#Añadir un servidor DNS a una interfaz (normalmente si tienes el servicio DNS el DNS primario suele ser el localhost)
+Set-DnsClientServerAddress -InterfaceIndex 1 -ServerAddresses 127.0.0.1
 
 #Permitir pings a la máquina
 netsh advfirewall firewall add rule name="Permitir pings" protocol=icmpv4:8,any dir=in action=allow

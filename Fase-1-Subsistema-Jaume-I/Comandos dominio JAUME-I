@@ -1,8 +1,11 @@
 
-#Comandos usados para configurar el servidor Jaume I
+#Comandos usados para configurar el servidor SRV-Jaume-I
 
 #Renombrar el nombre del dispositivo
 Rename-Computer -NewName "SRV-Jaume-I"
+
+#Renombrar un usuario
+rename-localuser -name "usuario" -newname "nuevo nombre"
 
 #Cambiar la hora por internet del servidor
 w32tm /config /syncfromflags:manual /manualpeerlist:es.ntp.pool.org /update

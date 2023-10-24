@@ -76,3 +76,6 @@ whoami
 
 #Comprobar las replicaciones del servidor
 repadmin /showrepl
+
+#Sincronizar las réplicas del servidor
+repadmin /syncall

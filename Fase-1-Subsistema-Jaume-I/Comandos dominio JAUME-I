@@ -60,7 +60,18 @@ Install-ADDSForest `
 -LogPath "C:\Windows\NTDS" `
 -NoRebootOnCompletion:$False `
 -SysvolPath "C:\Windows\SYSVOL" `
--Force:$true 
+-Force:$true
+
+#Muestra los detalles del bosque o dominio
+Get-ADForest
+Get-ADDomain
+
+#Verificar la replicación de Controladores de domino
+repadmin /replsummary
+dcdiag /test:replications
+
+#Verificar la cantidad de de solicitudes de replicación en cola
+repadmin /queue
 
 #Modificar archivos de AD mediante línea de comandos (este comando tiene subcomandos dentro de el, para verlos escriba ntdsutil help)
 ntdsutil

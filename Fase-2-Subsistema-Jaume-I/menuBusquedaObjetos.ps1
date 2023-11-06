@@ -17,13 +17,13 @@ function busqueda_UOs
 {
 #Listar los usuarios del dominio smr.local
 Write-Host UOs -Fore green 
-Get-ADOrganizationalUnit -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" Format-Table Name
+Get-ADOrganizationalUnit -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 }
 function busqueda_grupos
 {
 #Listar los usuarios del dominio smr.local
 Write-Host Grupos -Fore green 
-Get-ADGroup -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" Format-Table Name
+Get-ADGroup -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 }
 function busqueda_usuarios
 {

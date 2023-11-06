@@ -1,0 +1,5 @@
+Name*Path*Category*Scope
+Grupo-Informatica*OU=Dep-Informatica,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+Grupo-Bachillerato*OU=Dep-Bachillerato,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+Grupo-Direccion*OU=Dep-Direccion,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+Grupo-Conserjeria*OU=Dep-Conserjeria,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global

@@ -7,16 +7,16 @@ $domain="dc=IESJaume-I,dc=mylocal"
 function Show-Menu
 {
      param (
-           [string]$Titulo = 'Menú principal'
+           [string]$Titulo = 'MenÃº principal'
      )
      Clear-Host
      Write-Host "================ $Titulo ================"
     
-     Write-Host "1: Opción '1' Crear UOs."
-     Write-Host "2: Opci�n  '2' Crear Equipos."
-     Write-Host "3: Opción '3' Crear Grupos."
-     Write-Host "4: Opción '4' Crear Usuarios."
-     Write-Host "Q: Opción 'Q' Salir."
+     Write-Host "1: OpciÃ³n '1' Crear UOs."
+     Write-Host "2: Opción  '2' Crear Equipos."
+     Write-Host "3: OpciÃ³n '3' Crear Grupos."
+     Write-Host "4: OpciÃ³n '4' Crear Usuarios."
+     Write-Host "Q: OpciÃ³n 'Q' Salir."
 }
 function alta_UOs
 {
@@ -58,8 +58,8 @@ function alta_usuarios
 		$nameLarge=$linea.Name+' '+$linea.Surname1+' '+$linea.Surname2
 		$email=$linea.Email
 		[boolean]$Habilitado=$true
-    		If($linea.Enabled -Match 'false') { $Habilitado=$false}
-		#Establecer los días de expiración de la cuenta (Columna del csv ExpirationAccount)
+    		If($linea.Enabled -Match 'N') { $Habilitado=$false}
+		#Establecer los dÃ­as de expiraciÃ³n de la cuenta (Columna del csv ExpirationAccount)
    		$ExpirationAccount = $linea.TurnPassDays
     		$timeExp = (get-date).AddDays($ExpirationAccount)
 		#
@@ -73,7 +73,7 @@ function alta_usuarios
 			-PasswordNotRequired $false -Path $linea.Path -AccountExpirationDate $timeExp `
 		
   		#
-  		## Establecer horario de inicio de sesión       
+  		## Establecer horario de inicio de sesiÃ³n       
                 $horassesion = $linea.NetTime -replace(" ","")
                 net user $linea.Account /times:$horassesion 
 		
@@ -87,16 +87,16 @@ function alta_usuarios
 }
 
 
-#Primero comprobaremos si se tiene cargado el módulo Active Directory
-if (!(Get-Module -Name ActiveDirectory)) #Accederá al then solo si no existe una entrada llamada ActiveDirectory
+#Primero comprobaremos si se tiene cargado el mÃ³dulo Active Directory
+if (!(Get-Module -Name ActiveDirectory)) #AccederÃ¡ al then solo si no existe una entrada llamada ActiveDirectory
 {
-  Import-Module ActiveDirectory #Se carga el módulo
+  Import-Module ActiveDirectory #Se carga el mÃ³dulo
 }
 function alta_equipos {
 #
-#Creación de los grupos a partir de un fichero csv
+#CreaciÃ³n de los grupos a partir de un fichero csv
 #
-#Lee el fichero grupos.csv. El carácter delimitador de columna es :
+#Lee el fichero grupos.csv. El carÃ¡cter delimitador de columna es :
 $equiposCsv=Read-Host "Introduce el fichero csv de Equipos:"
 $fichero= import-csv -Path $equiposCsv -delimiter "*"
 
@@ -121,7 +121,7 @@ write-Host ""
 do
 {
      Show-Menu
-     $input = Read-Host "Por favor, pulse una opción"
+     $input = Read-Host "Por favor, pulse una opciÃ³n"
      switch ($input)
      {
            '1' {

@@ -15,13 +15,13 @@ function Show-Menu
 }
 function busqueda_UOs
 {
-#Listar los usuarios del dominio smr.local
+#Listar las UOs del dominio smr.local
 Write-Host UOs -Fore green 
 Get-ADOrganizationalUnit -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 }
 function busqueda_grupos
 {
-#Listar los usuarios del dominio smr.local
+#Listar los grupos del dominio smr.local
 Write-Host Grupos -Fore green 
 Get-ADGroup -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 }
@@ -34,7 +34,7 @@ Get-ADUser -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 
 function busqueda_equipos
 {
-#Listar los usuarios del dominio smr.local
+#Listar los equipos del dominio smr.local
 Write-Host Equipos -Fore green 
 Get-ADComputer -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 }

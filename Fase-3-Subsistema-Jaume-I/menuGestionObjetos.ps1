@@ -41,6 +41,8 @@ function alta_grupos
 			-GroupCategory:$linea.Category `
 			-GroupScope:$linea.Scope  `
 			-Path:$linea.Path
+   			if ( !($linea.addgroup -Match 'No') )
+      				{ Add-ADGroupMember -Identity $linea.addgroup -Members $linea.addmember }
 		}	
 		else { Write-Host "El grupo $line.Name ya existe en el sistema"}
 	}
@@ -71,6 +73,7 @@ function alta_usuarios
 			-AccountPassword $passAccount -Enabled $Habilitado `
 			-CannotChangePassword $false -ChangePasswordAtLogon $true `
 			-PasswordNotRequired $false -Path $linea.Path -AccountExpirationDate $timeExp `
+   			-ScriptPath $linea.ScriptPath `
 		
   		#
   		## Establecer horario de inicio de sesiÃ³n       

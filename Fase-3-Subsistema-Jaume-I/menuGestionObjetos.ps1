@@ -7,16 +7,17 @@ $domain="dc=IESJaume-I,dc=mylocal"
 function Show-Menu
 {
      param (
-           [string]$Titulo = 'MenÃº principal'
+           [string]$Titulo = 'Menú principal'
      )
      Clear-Host
      Write-Host "================ $Titulo ================"
     
-     Write-Host "1: OpciÃ³n '1' Crear UOs."
-     Write-Host "2: Opción  '2' Crear Equipos."
-     Write-Host "3: OpciÃ³n '3' Crear Grupos."
-     Write-Host "4: OpciÃ³n '4' Crear Usuarios."
-     Write-Host "Q: OpciÃ³n 'Q' Salir."
+     Write-Host "1: Opción '1' Crear UOs."
+     Write-Host "2: Opción '2' Crear Equipos."
+     Write-Host "3: Opción '3' Crear Grupos."
+     Write-Host "4: Opción '4' Crear Usuarios."
+     Write-Host "5: Opción '5' Añadir miembros a grupos"
+     Write-Host "Q: Opción 'Q' Salir."
 }
 function alta_UOs
 {
@@ -118,6 +119,17 @@ write-Host "Se han creado los equipos en el dominio $domain" -Fore green
 write-Host "" 
 }
 
+function asignacion_miembros
+{
+     	$gruposCsv=Read-Host "Introduce el fichero csv de Grupos:"
+	$ficheroImportado = import-csv -Path $gruposCsv -delimiter *
+	foreach($linea in $ficheroImportado)
+	{
+	 Add-ADGroupMember -Identity $linea.Group -Members $linea.Member 
+	}	
+     
+}
+
 #
 #MENU PRINCIPAL
 #
@@ -139,6 +151,9 @@ do
            } '4' {
                 Clear-Host
                 alta_usuarios
+	   } '5' {
+    		Clear-Host
+      		asignacion_miembros
            } 'q' {
                 'Salimos de la App'
                 return

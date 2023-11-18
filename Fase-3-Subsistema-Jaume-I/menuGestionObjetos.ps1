@@ -42,8 +42,6 @@ function alta_grupos
 			-GroupCategory:$linea.Category `
 			-GroupScope:$linea.Scope  `
 			-Path:$linea.Path
-   			if ( !($linea.addgroup -Match 'No') )
-      				{ Add-ADGroupMember -Identity $linea.addgroup -Members $linea.addmember }
 		}	
 		else { Write-Host "El grupo $line.Name ya existe en el sistema"}
 	}

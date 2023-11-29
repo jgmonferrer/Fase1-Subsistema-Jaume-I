@@ -1,0 +1,12 @@
+Name*Path*Category*Scope
+GG_Grupo-Informatica*OU=Dep-Informatica,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+GG_Grupo-Bachillerato*OU=Dep-Bachillerato,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+GG_Grupo-Direccion*OU=Dep-Direccion,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+GG_Grupo-Conserjeria*OU=Dep-Conserjeria,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*Global
+LG_R_Repositorio*OU=PermisosRNTFS,dc=IESJaume-I,dc=mylocal*Security*DomainLocal
+LG_W_Dep-Bachillerato*OU=PermisosRNTFS,dc=IESJaume-I,dc=mylocal*Security*DomainLocal
+LG_W_Dep-Conserjeria*OU=PermisosRNTFS,dc=IESJaume-I,dc=mylocal*Security*DomainLocal
+LG_W_Dep-Direccion*OU=PermisosRNTFS,dc=IESJaume-I,dc=mylocal*Security*DomainLocal
+LG_W_Dep-Informatica*OU=PermisosRNTFS,dc=IESJaume-I,dc=mylocal*Security*DomainLocal
+LG_impresion_modelo1*OU=Impresion,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*DomainLocal
+LG_impresion_modelo2*OU=Impresion,OU=Grupos,DC=IESJaume-I,DC=mylocal*Security*DomainLocal

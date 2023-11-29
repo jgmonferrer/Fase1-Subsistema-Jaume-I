@@ -1,0 +1,18 @@
+Name*Description*Path
+Grupos*UO para crear grupos, facilita la asignaci�n de roles a los usuarios*dc=IESJaume-I,dc=mylocal
+Dep-Informatica*Grupos del departamento de inform�tica*OU=Grupos,dc=IESJaume-I,dc=mylocal
+Dep-Bachillerato*Grupos del departamento de bachillerato*OU=Grupos,dc=IESJaume-I,dc=mylocal
+Dep-Direccion*Grupos del departamento de direcci�n*OU=Grupos,dc=IESJaume-I,dc=mylocal
+Dep-Conserjeria*Grupos del departamento de conserjer�a*OU=Grupos,dc=IESJaume-I,dc=mylocal
+Impresion*Grupos locales de impresion*OU=Grupos,dc=IESJaume-I,dc=mylocal
+Usuarios*UO para crear los usuarios del dominio, facilita distribuir a los usuarios en el dominio*dc=IESJaume-I,dc=mylocal
+Dep-Informatica*Usuarios del departamento de inform�tica*OU=Usuarios,dc=IESJaume-I,dc=mylocal
+Dep-Bachillerato*Usuarios del departamento de bachillerato*OU=Usuarios,dc=IESJaume-I,dc=mylocal
+Dep-Direccion*Usuarios del departamento de direcci�n*OU=Usuarios,dc=IESJaume-I,dc=mylocal
+Dep-Conserjeria*Usuarios del departamento de conserjer�a*OU=Usuarios,dc=IESJaume-I,dc=mylocal
+Equipos*UO para crear los equipos que se unir�n al dominio*dc=IESJaume-I,dc=mylocal
+Dep-Informatica*Equipos del departamento de inform�tica*OU=Equipos,dc=IESJaume-I,dc=mylocal
+Dep-Bachillerato*Equipos del departamento de bachillerato*OU=Equipos,dc=IESJaume-I,dc=mylocal
+Dep-Direccion*Equipos del departamento de direcci�n*OU=Equipos,dc=IESJaume-I,dc=mylocal
+Dep-Conserjeria*Equipos del departamento de conserjer�a*OU=Equipos,dc=IESJaume-I,dc=mylocal
+PermisosRNTFS*UO dise�ada para guardar los grupos locales que dan cualquier permiso a un usuario/grupo*dc=IESJaume-I,dc=mylocal

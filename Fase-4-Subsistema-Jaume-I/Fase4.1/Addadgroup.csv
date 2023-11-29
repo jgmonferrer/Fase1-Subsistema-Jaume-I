@@ -1,0 +1,13 @@
+Group*Member
+LG_R_Repositorio*GG_Grupo-Bachillerato
+LG_R_Repositorio*GG_Grupo-Conserjeria
+LG_R_Repositorio*GG_Grupo-Direccion
+LG_R_Repositorio*GG_Grupo-Informatica
+LG_W_Dep-Bachillerato*GG_Grupo-Bachillerato
+LG_W_Dep-Conserjeria*GG_Grupo-Conserjeria
+LG_W_Dep-Direccion*GG_Grupo-Direccion
+LG_W_Dep-Informatica*GG_Grupo-Informatica
+LG_impresion_modelo1*GG_Grupo-Bachillerato
+LG_impresion_modelo1*GG_Grupo-Direccion
+LG_impresion_modelo1*GG_Grupo-Conserjeria
+LG_impresion_modelo2*GG_Grupo-Informatica

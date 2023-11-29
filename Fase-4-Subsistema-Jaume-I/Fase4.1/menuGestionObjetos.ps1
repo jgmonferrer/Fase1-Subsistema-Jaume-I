@@ -119,7 +119,7 @@ write-Host ""
 
 function asignacion_miembros
 {
-     	$gruposCsv=Read-Host "Introduce el fichero csv de Grupos:"
+     	$gruposCsv=Read-Host "Introduce el fichero csv de Grupos o usuarios a añadir a un grupo:"
 	$ficheroImportado = import-csv -Path $gruposCsv -delimiter *
 	foreach($linea in $ficheroImportado)
 	{

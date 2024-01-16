@@ -1,0 +1,53 @@
+# Fichero de creación de unidades organizativas.
+# UOs para los usuarios del subsistema
+dn: ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: ou=Dep-Bachillerato,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Bachillerato
+
+dn: ou=Dep-Conserjeria,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-conserjeria
+
+dn: ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Informatica
+
+# UOs para los grupos del subsistema
+
+dn: ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Grupos
+
+dn: ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Bachillerato
+
+dn: ou=Dep-Conserjeria,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-conserjeria
+
+dn: ou=Dep-Informatica,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Informatica
+
+# UOs para los equipos del subsistema
+
+dn: ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Equipos
+
+dn: ou=Dep-Bachillerato,ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Bachillerato
+
+dn: ou=Dep-Conserjeria,ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-conserjeria
+
+dn: ou=Dep-Informatica,ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Informatica

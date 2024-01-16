@@ -1,0 +1,15 @@
+# Grupos globales del subistema
+dn: cn=GG-Informatica,ou=Dep-Informatica,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Informatica
+gidNumber: 5000
+
+dn: cn=GG-Direccion,ou=Dep-Direccion,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Direccion
+gidNumber: 5001
+
+dn: cn=GG-Bachillerato,ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Bachillerato
+gidNumber: 5002

@@ -4,9 +4,9 @@ objectClass: posixGroup
 cn: GG-Informatica
 gidNumber: 5000
 
-dn: cn=GG-Direccion,ou=Dep-Direccion,ou=Grupos,dc=IESJaume-I,dc=mylocal
+dn: cn=GG-Conserjeria,ou=Dep-Conserjeria,ou=Grupos,dc=IESJaume-I,dc=mylocal
 objectClass: posixGroup
-cn: GG-Direccion
+cn: GG-Conserjeria
 gidNumber: 5001
 
 dn: cn=GG-Bachillerato,ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal

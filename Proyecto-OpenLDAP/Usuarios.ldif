@@ -20,10 +20,10 @@ objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 uid: salabaus
-sn: Informática
+sn: Conserjeria
 givenName: salabaus
-cn: salabaus Informatica
-displayName: salabaus Informatica
+cn: salabaus Conserjeria
+displayName: salabaus Conserjeria
 uidNumber: 10001
 gidNumber: 5001
 userPassword: {SSHA}PV0NSGm2Yg8+jV4YL7KU6liFwkjrx9Vw
@@ -35,10 +35,10 @@ objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 uid: pgomisz
-sn: Informática
+sn: Bachillerato
 givenName: pgomisz
-cn: pgomisz Informatica
-displayName: pgomisz Informatica
+cn: pgomisz Bachillerato
+displayName: pgomisz Bachillerato
 uidNumber: 10002
 gidNumber: 5002
 userPassword: {SSHA}/r9L9xXEYVlGge2EZZFTDBL7fKqyB+wP

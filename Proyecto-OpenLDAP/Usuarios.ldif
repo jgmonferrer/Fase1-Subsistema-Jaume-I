@@ -15,7 +15,7 @@ userPassword: {SSHA}kazttcUwK8SEWO3XCVyj5G9oJhjGN1d9
 loginShell: /bin/bash
 homeDirectory: /home/lnavarror
 
-dn: uid=salabaus,ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+dn: uid=salabaus,ou=Dep-Conserjeria,ou=Usuarios,dc=IESJaume-I,dc=mylocal
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
@@ -25,12 +25,12 @@ givenName: salabaus
 cn: salabaus Informatica
 displayName: salabaus Informatica
 uidNumber: 10001
-gidNumber: 5000
+gidNumber: 5001
 userPassword: {SSHA}PV0NSGm2Yg8+jV4YL7KU6liFwkjrx9Vw
 loginShell: /bin/bash
 homeDirectory: /home/salabaus
 
-dn: uid=pgomisz,ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+dn: uid=pgomisz,ou=Dep-Bachillerato,ou=Usuarios,dc=IESJaume-I,dc=mylocal
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
@@ -40,7 +40,7 @@ givenName: pgomisz
 cn: pgomisz Informatica
 displayName: pgomisz Informatica
 uidNumber: 10002
-gidNumber: 5000
+gidNumber: 5002
 userPassword: {SSHA}/r9L9xXEYVlGge2EZZFTDBL7fKqyB+wP
 loginShell: /bin/bash
 homeDirectory: /home/pgomisz

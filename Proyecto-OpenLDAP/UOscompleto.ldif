@@ -64,3 +64,18 @@ dn: ou=Dep-Informatica,ou=Equipos,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit
 ou: Dep-Informatica
 
+# Grupos globales del subistema
+dn: cn=GG-Informatica,ou=Dep-Informatica,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Informatica
+gidNumber: 5000
+
+dn: cn=GG-Conserjeria,ou=Dep-Conserjeria,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Conserjeria
+gidNumber: 5001
+
+dn: cn=GG-Bachillerato,ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Bachillerato
+gidNumber: 5002

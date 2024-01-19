@@ -80,3 +80,49 @@ objectClass: posixGroup
 cn: GG-Bachillerato
 gidNumber: 5002
 
+#Creación de usuarios del subsistema
+
+dn: uid=lnavarror,ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: lnavarror
+sn: Informática
+givenName: lnavarror
+cn: lnavarror Informatica
+displayName: lnavarror Informatica
+uidNumber: 10000
+gidNumber: 5000
+userPassword: {SSHA}kazttcUwK8SEWO3XCVyj5G9oJhjGN1d9
+loginShell: /bin/bash
+homeDirectory: /home/lnavarror
+
+dn: uid=salabaus,ou=Dep-Conserjeria,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: salabaus
+sn: Conserjeria
+givenName: salabaus
+cn: salabaus Conserjeria
+displayName: salabaus Conserjeria
+uidNumber: 10001
+gidNumber: 5001
+userPassword: {SSHA}PV0NSGm2Yg8+jV4YL7KU6liFwkjrx9Vw
+loginShell: /bin/bash
+homeDirectory: /home/salabaus
+
+dn: uid=pgomisz,ou=Dep-Bachillerato,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: pgomisz
+sn: Bachillerato
+givenName: pgomisz
+cn: pgomisz Bachillerato
+displayName: pgomisz Bachillerato
+uidNumber: 10002
+gidNumber: 5002
+userPassword: {SSHA}/r9L9xXEYVlGge2EZZFTDBL7fKqyB+wP
+loginShell: /bin/bash
+homeDirectory: /home/pgomisz

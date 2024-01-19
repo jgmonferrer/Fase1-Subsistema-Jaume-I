@@ -79,3 +79,4 @@ dn: cn=GG-Bachillerato,ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal
 objectClass: posixGroup
 cn: GG-Bachillerato
 gidNumber: 5002
+

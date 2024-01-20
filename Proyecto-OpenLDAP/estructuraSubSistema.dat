@@ -241,7 +241,7 @@ structuralObjectClass: inetOrgPerson
 entryUUID: 8d27ae42-4bf8-103e-897f-e7d937dadd5c
 creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
 createTimestamp: 20240120155852Z
-homeDirectory: /home/ldapxxx
+homeDirectory: /home/pgomisz
 entryCSN: 20240120172855.033970Z#000000#000#000000
 modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
 modifyTimestamp: 20240120172855Z

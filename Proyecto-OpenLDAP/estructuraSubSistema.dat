@@ -1,0 +1,248 @@
+dn: dc=IESJaume-I,dc=mylocal
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: IESJaume-I
+dc: IESJaume-I
+structuralObjectClass: organization
+entryUUID: c1811cd8-4bf7-103e-964b-af31d8b33744
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155310Z
+entryCSN: 20240120155310.652989Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155310Z
+
+dn: ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Usuarios
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1729e6-4bf8-103e-896b-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.213862Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Bachillerato,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Bachillerato
+structuralObjectClass: organizationalUnit
+entryUUID: 8d19ad2e-4bf8-103e-896c-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.230344Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Conserjeria,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-conserjeria
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1a954a-4bf8-103e-896d-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.236286Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Informatica
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1ba980-4bf8-103e-896f-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.243357Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Grupos
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1c3030-4bf8-103e-8970-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.246805Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Bachillerato
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1cbf32-4bf8-103e-8971-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.250466Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Conserjeria,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-conserjeria
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1d3692-4bf8-103e-8972-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.253523Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Informatica,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Informatica
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1f0bf2-4bf8-103e-8974-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.265537Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Equipos
+structuralObjectClass: organizationalUnit
+entryUUID: 8d1ffc38-4bf8-103e-8975-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.271688Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Bachillerato,ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Bachillerato
+structuralObjectClass: organizationalUnit
+entryUUID: 8d20744c-4bf8-103e-8976-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.274763Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Conserjeria,ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-conserjeria
+structuralObjectClass: organizationalUnit
+entryUUID: 8d21013c-4bf8-103e-8977-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.278370Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: ou=Dep-Informatica,ou=Equipos,dc=IESJaume-I,dc=mylocal
+objectClass: organizationalUnit
+ou: Dep-Informatica
+structuralObjectClass: organizationalUnit
+entryUUID: 8d221432-4bf8-103e-8979-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.285408Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: cn=GG-Informatica,ou=Dep-Informatica,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Informatica
+gidNumber: 5000
+structuralObjectClass: posixGroup
+entryUUID: 8d228c64-4bf8-103e-897a-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.288488Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: cn=GG-Conserjeria,ou=Dep-Conserjeria,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Conserjeria
+gidNumber: 5001
+structuralObjectClass: posixGroup
+entryUUID: 8d239e10-4bf8-103e-897b-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.295492Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: cn=GG-Bachillerato,ou=Dep-Bachillerato,ou=Grupos,dc=IESJaume-I,dc=mylocal
+objectClass: posixGroup
+cn: GG-Bachillerato
+gidNumber: 5002
+structuralObjectClass: posixGroup
+entryUUID: 8d24847e-4bf8-103e-897c-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.301392Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: uid=lnavarror,ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: lnavarror
+sn:: SW5mb3Jtw6F0aWNh
+givenName: lnavarror
+cn: lnavarror Informatica
+displayName: lnavarror Informatica
+uidNumber: 10000
+gidNumber: 5000
+userPassword:: e1NTSEF9a2F6dHRjVXdLOFNFV08zWENWeWo1RzlvSmhqR04xZDk=
+loginShell: /bin/bash
+homeDirectory: /home/lnavarror
+structuralObjectClass: inetOrgPerson
+entryUUID: 8d259dfa-4bf8-103e-897d-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.308596Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: uid=salabaus,ou=Dep-Conserjeria,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: salabaus
+sn: Conserjeria
+givenName: salabaus
+cn: salabaus Conserjeria
+displayName: salabaus Conserjeria
+uidNumber: 10001
+gidNumber: 5001
+userPassword:: e1NTSEF9UFYwTlNHbTJZZzgralY0WUw3S1U2bGlGd2tqcng5Vnc=
+loginShell: /bin/bash
+homeDirectory: /home/salabaus
+structuralObjectClass: inetOrgPerson
+entryUUID: 8d268742-4bf8-103e-897e-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+entryCSN: 20240120155852.314568Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120155852Z
+
+dn: uid=pgomisz,ou=Dep-Bachillerato,ou=Usuarios,dc=IESJaume-I,dc=mylocal
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: pgomisz
+sn: Bachillerato
+givenName: pgomisz
+cn: pgomisz Bachillerato
+displayName: pgomisz Bachillerato
+uidNumber: 10002
+gidNumber: 5002
+userPassword:: e1NTSEF9L3I5TDl4WEVZVmxHZ2UyRVpaRlREQkw3ZktxeUIrd1A=
+loginShell: /bin/bash
+structuralObjectClass: inetOrgPerson
+entryUUID: 8d27ae42-4bf8-103e-897f-e7d937dadd5c
+creatorsName: cn=admin,dc=IESJaume-I,dc=mylocal
+createTimestamp: 20240120155852Z
+homeDirectory: /home/ldapxxx
+entryCSN: 20240120172855.033970Z#000000#000#000000
+modifiersName: cn=admin,dc=IESJaume-I,dc=mylocal
+modifyTimestamp: 20240120172855Z
+

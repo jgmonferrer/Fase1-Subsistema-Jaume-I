@@ -12,10 +12,6 @@ dn: ou=Dep-Conserjeria,ou=Usuarios,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit
 ou: Dep-conserjeria
 
-dn: ou=Dep-Direccion,ou=Usuarios,dc=IESJaume-I,dc=mylocal
-objectClass: organizationalUnit
-ou: Dep-Direccion
-
 dn: ou=Dep-Informatica,ou=Usuarios,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit
 ou: Dep-Informatica
@@ -34,10 +30,6 @@ dn: ou=Dep-Conserjeria,ou=Grupos,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit
 ou: Dep-conserjeria
 
-dn: ou=Dep-Direccion,ou=Grupos,dc=IESJaume-I,dc=mylocal
-objectClass: organizationalUnit
-ou: Dep-Direccion
-
 dn: ou=Dep-Informatica,ou=Grupos,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit
 ou: Dep-Informatica
@@ -55,10 +47,6 @@ ou: Dep-Bachillerato
 dn: ou=Dep-Conserjeria,ou=Equipos,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit
 ou: Dep-conserjeria
-
-dn: ou=Dep-Direccion,ou=Equipos,dc=IESJaume-I,dc=mylocal
-objectClass: organizationalUnit
-ou: Dep-Direccion
 
 dn: ou=Dep-Informatica,ou=Equipos,dc=IESJaume-I,dc=mylocal
 objectClass: organizationalUnit

@@ -60,7 +60,7 @@ function alta_usuarios
 		$email=$linea.Email
 		[boolean]$Habilitado=$true
     		If($linea.Enabled -Match 'N') { $Habilitado=$false}
-		#Establecer los dÃ­as de expiraciÃ³n de la cuenta (Columna del csv ExpirationAccount)
+		#Establecer los dias de expiracion de la cuenta (Columna del csv ExpirationAccount)
    		$ExpirationAccount = $linea.TurnPassDays
     		$timeExp = (get-date).AddDays($ExpirationAccount)
 		#
@@ -89,16 +89,16 @@ function alta_usuarios
 }
 
 
-#Primero comprobaremos si se tiene cargado el mÃ³dulo Active Directory
+#Primero comprobaremos si se tiene cargado el modulo Active Directory
 if (!(Get-Module -Name ActiveDirectory)) #AccederÃ¡ al then solo si no existe una entrada llamada ActiveDirectory
 {
-  Import-Module ActiveDirectory #Se carga el mÃ³dulo
+  Import-Module ActiveDirectory #Se carga el modulo
 }
 function alta_equipos {
 #
-#CreaciÃ³n de los grupos a partir de un fichero csv
+#Creacion de los grupos a partir de un fichero csv
 #
-#Lee el fichero grupos.csv. El carÃ¡cter delimitador de columna es :
+#Lee el fichero grupos.csv. El caracter delimitador de columna es :
 $equiposCsv=Read-Host "Introduce el fichero csv de Equipos:"
 $fichero= import-csv -Path $equiposCsv -delimiter "*"
 
@@ -134,7 +134,7 @@ function asignacion_miembros
 do
 {
      Show-Menu
-     $input = Read-Host "Por favor, pulse una opciÃ³n"
+     $input = Read-Host "Por favor, pulse una opcion"
      switch ($input)
      {
            '1' {

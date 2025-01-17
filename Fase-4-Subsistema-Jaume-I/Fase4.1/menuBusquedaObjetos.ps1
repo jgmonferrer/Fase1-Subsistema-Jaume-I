@@ -2,16 +2,16 @@
 function Show-Menu
 {
      param (
-           [string]$Titulo = 'Menú principal'
+           [string]$Titulo = 'MenÃº principal'
      )
      Clear-Host
      Write-Host "================ $Titulo ================"
     
      Write-Host "1: Opcion '1' Buscar todas las UOs."
-     Write-Host "2: Opci�n  '2' Buscar todos los Equipos."
+     Write-Host "2: Opción  '2' Buscar todos los Equipos."
      Write-Host "3: Opcion '3' Buscar todos los Grupos."
-     Write-Host "4: Opción '4' Buscar todos los Usuarios."
-     Write-Host "Q: Opción 'Q' Salir."
+     Write-Host "4: OpciÃ³n '4' Buscar todos los Usuarios."
+     Write-Host "Q: OpciÃ³n 'Q' Salir."
 }
 function busqueda_UOs
 {
@@ -39,10 +39,10 @@ Write-Host Equipos -Fore green
 Get-ADComputer -filter * -SearchBase "dc=IESJaume-I,dc=mylocal" | Format-Table Name
 }
 
-#Primero comprobaremos si se tiene cargado el módulo Active Directory
-if (!(Get-Module -Name ActiveDirectory)) #Accederá al then solo si no existe una entrada llamada ActiveDirectory
+#Primero comprobaremos si se tiene cargado el modulo Active Directory
+if (!(Get-Module -Name ActiveDirectory)) #Accedera al then solo si no existe una entrada llamada ActiveDirectory
 {
-  Import-Module ActiveDirectory #Se carga el módulo
+  Import-Module ActiveDirectory #Se carga el modulo
 }
 
 

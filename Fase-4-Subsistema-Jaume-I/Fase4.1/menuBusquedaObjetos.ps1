@@ -10,8 +10,8 @@ function Show-Menu
      Write-Host "1: Opcion '1' Buscar todas las UOs."
      Write-Host "2: Opción  '2' Buscar todos los Equipos."
      Write-Host "3: Opcion '3' Buscar todos los Grupos."
-     Write-Host "4: OpciÃ³n '4' Buscar todos los Usuarios."
-     Write-Host "Q: OpciÃ³n 'Q' Salir."
+     Write-Host "4: Opcion '4' Buscar todos los Usuarios."
+     Write-Host "Q: Opcion 'Q' Salir."
 }
 function busqueda_UOs
 {

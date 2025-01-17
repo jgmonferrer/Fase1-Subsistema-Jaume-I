@@ -1,12 +1,12 @@
-Grupos*UO para crear grupos, facilita la asignación de roles a los usuarios*DC=iesjaume-i,DC=mylocal
+Grupos*UO para crear grupos, facilita la asignación de roles a los usuarios*OU=Grupos,DC=iesjaume-i,DC=mylocal
 Dep-Informatica*Grupos del departamento de informática*OU=Dep-Informatica,OU=Grupos,DC=iesjaume-i,DC=mylocal
 Dep-Bachillerato*Grupos del departamento de bachillerato*OU=Dep-Bachillerato,OU=Grupos,DC=iesjaume-i,DC=mylocal
 Dep-Direccion*Grupos del departamento de dirección*OU=Dep-Direccion,OU=Grupos,DC=iesjaume-i,DC=mylocal
-Usuarios*UO para crear los usuarios del dominio, facilita distribuir a los usuarios en el dominio*DC=iesjaume-i,DC=mylocal
+Usuarios*UO para crear los usuarios del dominio, facilita distribuir a los usuarios en el dominio*OU=Usuarios,DC=iesjaume-i,DC=mylocal
 Dep-Informatica*Usuarios del departamento de informática*OU=Dep-Informatica,OU=Usuarios,DC=iesjaume-i,DC=mylocal
 Dep-Bachillerato*Usuarios del departamento de bachillerato*OU=Dep-Bachillerato,OU=Usuarios,DC=iesjaume-i,DC=mylocal
 Dep-Direccion*Usuarios del departamento de dirección*OU=Dep-Direccion,OU=Usuarios,DC=iesjaume-i,DC=mylocal
-Equipos*UO para crear los equipos que se unirán al dominio*DC=iesjaume-i,DC=mylocal
+Equipos*UO para crear los equipos que se unirán al dominio*OU=Equipos,DC=iesjaume-i,DC=mylocal
 Dep-Informatica*Equipos del departamento de informática*OU=Dep-Informatica,OU=Equipos,DC=iesjaume-i,DC=mylocal
 Dep-Bachillerato*Equipos del departamento de bachillerato*OU=Dep-Bachillerato,OU=Equipos,DC=iesjaume-i,DC=mylocal
 Dep-Direccion*Equipos del departamento de dirección*OU=Dep-Direccion,OU=Equipos,DC=iesjaume-i,DC=mylocal
